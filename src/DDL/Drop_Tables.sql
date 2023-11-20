@@ -1,0 +1,16 @@
+DROP TABLE atuou;
+DROP TABLE dirigiu;
+DROP TABLE produziu;
+DROP TABLE roteirizou;
+DROP TABLE generoFilme;
+DROP TABLE avaliacaoEspectador;
+DROP TABLE avaliacaoCritico;
+DROP TABLE ator;
+DROP TABLE diretor;
+DROP TABLE produtora;
+DROP TABLE roteirista;
+DROP TABLE genero;
+DROP TABLE premiacao;
+DROP TABLE critico;
+DROP TABLE espectador;
+DROP TABLE filme;
