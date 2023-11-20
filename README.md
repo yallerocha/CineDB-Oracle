@@ -4,7 +4,7 @@
 
 Bem-vindo ao CineDB, um projeto de banco de dados Oracle criado para centralizar e organizar informações completas sobre o universo cinematográfico. Este banco de dados guarda dados sobre atores, diretores, produtores, roteiristas, gêneros, premiações e avaliações de críticos e espectadores. 🌟🎥
 
-### 🍿 Objetivos do Projeto
+## 🍿 Objetivos do Projeto
 
 1. **Centralizar Informações:** Unificar dados dispersos da indústria cinematográfica para facilitar o acesso a informações completas e detalhadas.
 
