@@ -13,6 +13,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Filme criado com sucesso!');
 END criar_filme;
+/
 
 CREATE OR REPLACE PROCEDURE criar_ator (
     p_nome VARCHAR2,
@@ -26,6 +27,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Ator criado com sucesso!');
 END criar_ator;
+/
 
 CREATE OR REPLACE PROCEDURE criar_diretor (
     p_nome VARCHAR2,
@@ -39,6 +41,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Diretor criado com sucesso!');
 END criar_diretor;
+/
 
 CREATE OR REPLACE PROCEDURE criar_produtora (
     p_nome VARCHAR2
@@ -49,6 +52,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Produtora criada com sucesso!');
 END criar_produtora;
+/
 
 CREATE OR REPLACE PROCEDURE criar_roteirista (
     p_nome VARCHAR2,
@@ -62,6 +66,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Roteirista criado com sucesso!');
 END criar_roteirista;
+/
 
 CREATE OR REPLACE PROCEDURE criar_genero (
     p_tipo VARCHAR2
@@ -72,6 +77,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Gênero criado com sucesso!');
 END criar_genero;
+/
 
 CREATE OR REPLACE PROCEDURE criar_premiacao (
     p_nome VARCHAR2,
@@ -85,6 +91,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Premiação criada com sucesso!');
 END criar_premiacao;
+/
 
 CREATE OR REPLACE PROCEDURE criar_critico (
     p_nome VARCHAR2,
@@ -98,6 +105,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Crítico criado com sucesso!');
 END criar_critico;
+/
 
 CREATE OR REPLACE PROCEDURE criar_espectador (
     p_nome VARCHAR2,
@@ -111,6 +119,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Espectador criado com sucesso!');
 END criar_espectador;
+/
 
 CREATE OR REPLACE PROCEDURE criar_avaliacao_espectador (
     p_id_espectador INTEGER,
@@ -124,6 +133,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Avaliação do espectador criada com sucesso!');
 END criar_avaliacao_espectador;
+/
 
 CREATE OR REPLACE PROCEDURE criar_avaliacao_critico (
     p_id_critico INTEGER,
@@ -137,6 +147,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Avaliação do crítico criada com sucesso!');
 END criar_avaliacao_critico;
+/
 
 CREATE OR REPLACE PROCEDURE relacionar_ator_filme (
     p_id_ator INTEGER,
@@ -149,6 +160,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relacionamento entre ator e filme estabelecido com sucesso!');
 END relacionar_ator_filme;
+/
 
 CREATE OR REPLACE PROCEDURE relacionar_diretor_filme (
     p_id_diretor INTEGER,
@@ -161,6 +173,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relacionamento entre diretor e filme estabelecido com sucesso!');
 END relacionar_diretor_filme;
+/
 
 CREATE OR REPLACE PROCEDURE relacionar_produtora_filme (
     p_id_produtora INTEGER,
@@ -173,6 +186,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relacionamento entre produtora e filme estabelecido com sucesso!');
 END relacionar_produtora_filme;
+/
 
 CREATE OR REPLACE PROCEDURE relacionar_roteirista_filme (
     p_id_roteirista INTEGER,
@@ -185,15 +199,17 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relacionamento entre roteirista e filme estabelecido com sucesso!');
 END relacionar_roteirista_filme;
+/
 
 CREATE OR REPLACE PROCEDURE relacionar_genero_filme (
     p_id_genero INTEGER,
     p_id_filme INTEGER
 ) AS
 BEGIN
-    INSERT INTO filmeGenero (idFilme, idGenero)
-    VALUES (p_id_filme, p_id_genero);
+    INSERT INTO generoFilme (idGenero, idFilme)
+    VALUES (p_id_genero, p_id_filme);
     
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relacionamento entre gênero e filme estabelecido com sucesso!');
 END relacionar_genero_filme;
+/

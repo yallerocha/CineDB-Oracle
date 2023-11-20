@@ -92,6 +92,12 @@ CREATE TABLE roteirizou (
     PRIMARY KEY (idRoteirista, idFilme)
 );
 
+CREATE TABLE generoFilme (
+    idGenero INTEGER REFERENCES genero(id) ON DELETE SET NULL,
+    idFilme INTEGER REFERENCES filme(id) ON DELETE CASCADE,
+    PRIMARY KEY (idGenero, idFilme)
+);
+
 CREATE TABLE avaliacaoEspectador (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     idEspectador INTEGER REFERENCES espectador(id) ON DELETE CASCADE,

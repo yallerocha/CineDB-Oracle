@@ -7,6 +7,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Ator deletado com sucesso!');
 END deletar_ator;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_diretor (
     p_id_diretor INTEGER
@@ -17,6 +18,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Diretor deletado com sucesso!');
 END deletar_diretor;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_produtora (
     p_id_produtora INTEGER
@@ -27,6 +29,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Produtora deletada com sucesso!');
 END deletar_produtora;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_roteirista (
     p_id_roteirista INTEGER
@@ -37,6 +40,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Roteirista deletado com sucesso!');
 END deletar_roteirista;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_genero (
     p_id_genero INTEGER
@@ -47,6 +51,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Gênero deletado com sucesso!');
 END deletar_genero;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_premiacao (
     p_id_premiacao INTEGER
@@ -57,6 +62,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Premiação deletada com sucesso!');
 END deletar_premiacao;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_critico (
     p_id_critico INTEGER
@@ -67,6 +73,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Crítico deletado com sucesso!');
 END deletar_critico;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_espectador (
     p_id_espectador INTEGER
@@ -77,6 +84,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Espectador deletado com sucesso!');
 END deletar_espectador;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_filme (
     p_id_filme INTEGER
@@ -87,6 +95,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Filme deletado com sucesso!');
 END deletar_filme;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_relacao_ator_filme (
     p_id_ator INTEGER,
@@ -99,6 +108,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relação entre ator e filme deletada com sucesso!');
 END deletar_relacao_ator_filme;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_relacao_diretor_filme (
     p_id_diretor INTEGER,
@@ -111,6 +121,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relação entre diretor e filme deletada com sucesso!');
 END deletar_relacao_diretor_filme;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_relacao_produtora_filme (
     p_id_produtora INTEGER,
@@ -123,6 +134,7 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relação entre produtora e filme deletada com sucesso!');
 END deletar_relacao_produtora_filme;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_relacao_roteirista_filme (
     p_id_roteirista INTEGER,
@@ -135,15 +147,17 @@ BEGIN
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relação entre roteirista e filme deletada com sucesso!');
 END deletar_relacao_roteirista_filme;
+/
 
 CREATE OR REPLACE PROCEDURE deletar_relacao_genero_filme (
     p_id_genero INTEGER,
     p_id_filme INTEGER
 ) AS
 BEGIN
-    DELETE FROM filmeGenero
+    DELETE FROM generoFilme
     WHERE idGenero = p_id_genero AND idFilme = p_id_filme;
     
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Relação entre gênero e filme deletada com sucesso!');
 END deletar_relacao_genero_filme;
+/
