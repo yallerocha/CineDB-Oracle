@@ -21,7 +21,7 @@ Se você é um amante do cinema e deseja contribuir para a expansão do CineDB, 
 2. Crie uma branch para suas alterações: `git checkout -b feature/nova-feature`.
 3. Realize suas contribuições e faça commit: `git commit -m 'Adiciona nova funcionalidade'`.
 4. Faça push para a branch: `git push origin feature/nova-feature`.
-5. Abra um Pull Request e participe da construção do futuro do CineDB. 
+5. Abra um Pull Request e participe da construção do futuro do CineDB.
 
 ## 📄 Licença
 Este projeto é licenciado sob a [Licença MIT](LICENSE). 
