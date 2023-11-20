@@ -52,7 +52,6 @@ CREATE TABLE premiacao (
     idFilme INTEGER REFERENCES filme(id) ON DELETE CASCADE
 );
 
-
 CREATE TABLE critico (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome VARCHAR2(100) NOT NULL,
@@ -108,5 +107,3 @@ CREATE TABLE avaliacaoCritico (
     comentario CLOB,
     nota NUMBER(1,1) CHECK (nota >= 0 AND nota <= 5)
 );
-
-
